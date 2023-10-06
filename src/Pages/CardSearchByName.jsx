@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 export default function CardSearchByName() {
 
      // search results
-     const [searchResults, setSearchResults] = useState();
+     const [searchResults, setSearchResults] = useState([]);
 
      // api URL
      const {api} = useContext(ApiContext);
@@ -22,7 +22,7 @@ export default function CardSearchByName() {
      
           async function apiRequest(){
                let queryParams = new URLSearchParams({
-                    q: 'name' + pokemonName
+                    q: 'name:' + pokemonName
                })
 
                let response = await fetch(api + 'cards?' + queryParams, {
