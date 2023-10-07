@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ApiProvider from './context/ApiContext';
+import ApiProvider from './contexts/ApiContext';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import CardSearchByName from './Pages/CardSearchByName';
+import CardSearchByName from './pages/CardSearchByName';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
